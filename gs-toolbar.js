@@ -24,7 +24,7 @@
     this.removeEvents();
   };
 
-  var domain = 'http://dd.howtox.com:';
+  var domain = 'http://da.howtox.com:';
   var urlCreate = domain + '3000/docker/containers/create/';
 
   GsToolbarProto.addEvents = function(){
@@ -32,9 +32,9 @@
 
     this.$el.on('click', '.vm', function(){
       console.log('click .vm');
-      var gitTag = that.$el.data('tag');
-      var gitRepo = that.$el.data('repo');
-      var cmd = that.$el.data('cmd');
+      var gitTag = that.$el.data('tag') && that.$el.data('tag').toLowerCase();
+      var gitRepo = that.$el.data('repo') && that.$el.data('repo').toLowerCase();
+      var cmd = that.$el.data('cmd') && that.$el.data('cmd').toLowerCase();
 
       $.post(urlCreate, {
           tag: gitTag,
