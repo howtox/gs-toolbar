@@ -7,7 +7,7 @@
   var GsHowtoToolbarProto = Object.create(HTMLElement.prototype);
 
   GsHowtoToolbarProto.createdCallback = function(){
-    console.log('createdCallback');
+    // console.log('createdCallback');
     this.innerHTML = template;
     this.$el = $(this);
   };
@@ -17,7 +17,7 @@
   };
 
   GsHowtoToolbarProto.attributeChangedCallback = function(){
-    console.log('attributeChangedCallback');
+    // console.log('attributeChangedCallback');
   };
 
   GsHowtoToolbarProto.detachedCallback = function(){
